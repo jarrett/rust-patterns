@@ -12,6 +12,12 @@ struct PackagedEvent<T: 'static> {
   emitter: EmitterRef<T>
 }
 
+// Example of an emitter.
+#[derive(Debug)]
+struct Bar {
+  events: Events
+}
+
 impl<T> PackagedEvent<T> {
   fn cast<U, V, F>(&self, f: F) -> Option<V>
     where U: 'static, F: FnOnce(&U) -> V

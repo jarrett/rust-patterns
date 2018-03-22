@@ -25,11 +25,6 @@ impl AsAny for FooEvent {
   fn as_any(&self) -> &Any { self }
 }
 
-#[derive(Debug)]
-struct Bar {
-  events: Events
-}
-
 impl Events {
   fn emit<U: 'static + Event>(&mut self, event: U) {
     self.queue.push(Box::new(event));

@@ -1,0 +1,6 @@
+[package]
+name = "rust-patterns"
+version = "0.1.0"
+authors = ["Jarrett Colby <jarrett@madebyhq.com>"]
+
+[dependencies]
